@@ -13,9 +13,6 @@ license.workspace = true
 repository.workspace = true
 exclude.workspace = true
 
-[lib]
-proc_macro = true
-
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]

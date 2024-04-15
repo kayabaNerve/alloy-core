@@ -238,13 +238,6 @@ mod verbatim;
 /// ```ignore
 #[cfg_attr(doc, doc = include_str!("../doctests/json.rs"))]
 /// ```
-#[proc_macro]
-#[proc_macro_error]
-pub fn sol(input: TokenStream) -> TokenStream {
-    let input = parse_macro_input!(input as alloy_sol_macro_input::SolInput);
-
-    SolMacroExpander.expand(&input).unwrap_or_else(syn::Error::into_compile_error).into()
-}
 
 pub struct SolMacroExpander;
 
